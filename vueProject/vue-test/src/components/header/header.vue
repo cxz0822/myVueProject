@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="header">
+    <div class="header">
         <div class="header-top">
             <div class="header-top-wrap clearfix">
                 <div class="left">传智播客旗下高端在线IT职业教育学习平台</div>
@@ -74,6 +74,6 @@
     }
 </script>
 
-<style scoped rel="stylesheet/less" lang="less">
+<style rel="stylesheet/less" lang="less">
     @import "header.less";
 </style>
