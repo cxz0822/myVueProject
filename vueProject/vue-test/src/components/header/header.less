@@ -1,0 +1,132 @@
+@import "../../common/common.less";
+.header{
+  .left{
+    float:left;
+  }
+  .right{
+    float:right;
+  }
+  .header-top{
+    background-color:#f7f7f7;
+    border-bottom:1px solid #eee;
+    .header-top-wrap{
+      width:1200px;
+      height:40px;
+      margin:0 auto;
+      color:#999;
+      font-size:14px;
+      line-height:40px;
+    }
+  }
+  .header-middle{
+    background:#fff;
+    .header-middle-bg{
+      width:1200px;
+      margin:20px auto 10px;
+      .left{
+        span{
+          display: inline-block;
+          vertical-align: middle;
+          font-size:16px;
+          color:#333;
+          margin-left:20px;
+          margin-top: -35px;
+          font-weight:bold;
+        }
+      }
+      .right{
+        margin-top:15px;
+        a{
+          font-size:14px;
+          color:#333;
+          margin-right:30px;
+          display:inline-block;
+        }
+        .separator{
+          color:#ccc;
+          margin:0 3px;
+        }
+        .loginAndRegister{
+          display:inline-block;
+          a{
+            margin-right:0;
+          }
+          i{
+            color:#ccc;
+            font-size:12px;
+          }
+        }
+      }
+    }
+  }
+  .header-bottom{
+    background-color:#fff;
+    .header-bottom-wrap{
+      width:1200px;
+      margin:0 auto;
+     .allSubjects,.courseType{
+       float:left;
+     }
+      .allSubjects{
+        width:220px;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        color:#fff;
+        background-color:#5fcd5a;
+        font-size:20px;
+        border-top-left-radius:8px;
+        border-top-right-radius:8px;
+      }
+      .courseType{
+        height:50px;
+        margin-left:30px;
+        line-height:50px;
+        li{
+          float:left;
+          margin-right:35px;
+          cursor:pointer;
+          .microMajor{
+            span{
+              font-size: 16px;
+              color:#333;
+            }
+            i{
+              font-size:12px;
+              color:#ccc;
+            }
+          }
+          &.active{
+            color:#5fcd5a;
+          }
+          &:hover{
+            color:#5fcd5a;
+          }
+        }
+      }
+      .searchBox{
+        position:relative;
+        float:right;
+        width:204px;
+        height:36px;
+        margin-top: 5px;
+        .searchInput{
+          width:100%;
+          height:36px;
+          box-sizing:border-box;
+          border:1px solid #eee;
+          text-indent: 12px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+        }
+        .searchBtn{
+          position:absolute;
+          right:20px;
+          top:11px;
+          color:#ccc;
+        }
+      }
+    }
+  }
+}

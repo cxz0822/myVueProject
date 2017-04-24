@@ -1,0 +1,27 @@
+html,body,p,a,ul,li,ol,h1,h2,h3,h4,h5,h6,div{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+}
+input,a{
+  outline:none;
+  border:none;
+}
+ul,li,ol{
+  list-style:none;
+}
+.clearfix:after{
+  content:"";
+  height:0;
+  visibility: hidden;
+  display:block;
+  clear:both;
+}
+//Ô²½Ç
+.border_radius(@radius){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
