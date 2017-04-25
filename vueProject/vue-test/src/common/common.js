@@ -18,7 +18,7 @@ let requestService=function(vm,getparams){
 
             }
         };
-    vm.$http.jsonp({
+    vm.$http({
         method:getParamsObj.type || 'get',
         url:domainName +getParamsObj.url,
         params:getParamsObj.data || {}

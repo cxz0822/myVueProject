@@ -549,10 +549,21 @@
     import {requestService} from '../../common/common.js'
     export default {
         name: 'index',
-        mounted (){
-        requestService(this,{
-            url:'menu/getAllMenu'
-        })
+        created:function(){
+            this.getCourseLists();
+        },
+        methods:{
+            getCourseLists:function(){
+                this.$http({
+                    method:'GET',
+                    data:"json",
+                    url:'vueProject/vue-test/src/components/index/indexData.json'
+                }).then(function(response){
+
+                },function(error){
+
+                })
+            }
         }
     }
 </script>
