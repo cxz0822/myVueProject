@@ -1,4 +1,6 @@
+import './common/common.less'
 import Vue from 'vue'
+import Resource from 'vue-resource'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 /**--ElementUI按需加载- start-*/
