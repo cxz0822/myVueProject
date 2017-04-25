@@ -5,15 +5,15 @@ import 'element-ui/lib/theme-default/index.css'
 Vue.use(Element);
 
 /**--ElementUI按需加载- end-*/
-import Header from '../src/components/header/header'
+import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 const app=new Vue({
-  el: '#app',
+  name:'root',
   router,
-  render: h => h(Header)
+  render: h => h(App)
 });
 app.$mount('#app');

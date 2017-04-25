@@ -1,0 +1,85 @@
+@import "../../common/common.less";
+.indexFooter{
+  background-color:#2c333f;
+  padding:40px 0;
+  border-bottom:1px solid #393e46;
+  .indexFooter-wrap{
+    width:1200px;
+    margin:0 auto;
+    .indexFooter-left,.indexFooter-middle,.indexFooter-right{
+      display:inline-block;
+      color:#ced3db;
+      vertical-align: top;
+      h2{
+        font-size:20px;
+      }
+    }
+    .indexFooter-left{
+      width:375px;
+      p{
+        margin-top:20px;
+        font-size:14px;
+      }
+    }
+    .indexFooter-middle{
+      margin:0 120px;
+      .aboutUs{
+        margin-top:20px;
+        .aboutUs-weiBo,.aboutUs-weiXin{
+          display:inline-block;
+          cursor:pointer;
+          position:relative;
+          >img{
+            width:32px;
+            height:32px;
+          }
+          .aboutUs-weiBo-hover,.aboutUs-weiXin-hover{
+            display:none;
+            position: absolute;
+            padding: 15px;
+            -webkit-box-shadow: 1px 1px 5px 1px #ececec;
+            -moz-box-shadow: 1px 1px 5px 1px #ececec;
+            box-shadow: 1px 1px 5px 1px #ececec;
+            background-color: #fff;
+            top: -200px;
+            left: -55px;
+            p{
+              margin-top: 3px;
+              font-size: 12px;
+              line-height: 16px;
+              color: #333;
+              text-align:center;
+            }
+            .indexSanjiao{
+              position:absolute;
+              top: 189px;
+              left: 63px;
+            }
+          }
+        }
+        .aboutUs-weiBo{
+          margin-right:20px;
+          &:hover .aboutUs-weiBo-hover{
+            display:block;
+          }
+        }
+        .aboutUs-weiXin{
+          &:hover .aboutUs-weiXin-hover{
+            display:block;
+          }
+        }
+      }
+    }
+    .indexFooter-right{
+      width:480px;
+      .firendLink-div{
+        margin-top:15px;
+        a{
+          color:#ced3db;
+          font-size:14px;
+          margin-right:28px;
+        }
+      }
+    }
+  }
+}
