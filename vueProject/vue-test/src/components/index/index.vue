@@ -555,14 +555,14 @@
         methods:{
             getCourseLists:function(){
                 this.$http({
-                    method:'GET',
-                    data:"json",
-                    url:'vueProject/vue-test/src/components/index/indexData.json'
-                }).then(function(response){
+                 method:'GET',
+                 data:"json",
+                 url:'static/indexData.json'
+                 }).then(function(response){
 
-                },function(error){
+                 },function(error){
 
-                })
+                 })
             }
         }
     }
