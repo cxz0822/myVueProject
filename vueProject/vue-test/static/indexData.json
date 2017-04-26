@@ -1,8 +1,5 @@
 {
-  "success":true,
-  "errorMessage":null,
-  "resultObject":[
-    {"createPerson":"在线管理员","createTime":"2016-09-02 10:12:19","id":0,"name":"全部","number":3,"type":0,"delete":false},
+  "getCourseList":[
     {"createPerson":"慕白","createTime":"2016-10-26 16:05:32","id":141,"name":"前端","number":4,"type":0,"delete":false},
     {"createPerson":"慕白","createTime":"2016-11-02 09:28:35","id":145,"name":"Java","number":8,"type":0,"delete":false},
     {"createPerson":"在线管理员","createTime":"2016-09-02 09:40:56","id":118,"name":"大数据","number":1,"type":0,"delete":false},
@@ -11,6 +8,30 @@
     {"createPerson":"申道林","createTime":"2017-02-10 14:35:10","id":160,"name":"C/C++","number":23,"type":0,"delete":false},
     {"createPerson":"申道林","createTime":"2017-02-21 11:43:17","id":161,"name":"iOS","number":24,"type":0,"delete":false},
     {"createPerson":"在线管理员","createTime":"2016-09-02 09:42:27","id":119,"name":"UI","number":2,"type":0,"delete":false},
-    {"createPerson":"慕白","createTime":"2017-01-16 18:28:20","id":156,"name":"管理培训","number":19,"type":0,"delete":false}
-  ,{"createPerson":"慕白","createTime":"2017-01-11 18:06:31","id":155,"name":"网络营销","number":18,"type":0,"delete":false},
-    {"createPerson":"申道林","createTime":"2017-02-22 11:40:28","id":162,"name":"Python","number":25,"type":0,,"delete":false}]}
+    {"createPerson":"慕白","createTime":"2017-01-11 18:06:31","id":155,"name":"网络营销","number":18,"type":0,"delete":false},
+    {"createPerson":"申道林","createTime":"2017-02-22 11:40:28","id":162,"name":"Python","number":25,"type":0,"delete":false}
+  ],
+"getBannerList":[
+  {"id":27,"createPerson":"zx","createTime":"2017-04-17 15:14:36","imgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/04/17/15/79df1d85e23d487a8dcac95a88821b1a.jpg","description":"新用户注册领取课程","imgHref":"http://t.cn/RXIvGu5","sort":-18,"status":1,"startTime":"2017-04-17 16:45:47","endTime":"2017-04-17 16:46:02","clickCount":566,"bgColor":null,"delete":false},
+  {"id":16,"createPerson":"lzq","createTime":"2017-02-20 16:35:05","imgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/04/19/21/830ea61593ce45fe8496d10ad0797b61.jpg","description":"javaEE","imgHref":"https://www.boxuegu.com/web/subject/JavaEE/index.html?time=20170522","sort":-17,"status":1,"startTime":"2017-02-20 16:35:15","endTime":null,"clickCount":1629,"bgColor":null,"delete":false},
+  {"id":10,"createPerson":"lzq","createTime":"2016-10-31 11:01:07","imgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/21/16/3ed79ebae5b44a72a638b49b49cee476.png","description":"大数据","imgHref":"https://www.boxuegu.com/web/subject/data/index.html?time=20170512","sort":-12,"status":1,"startTime":"2016-10-31 11:01:09","endTime":"2017-03-02 15:04:32","clickCount":2361,"bgColor":null,"delete":false},
+  {"id":9,"createPerson":"lzq","createTime":"2016-10-31 09:09:10","imgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/04/19/21/e3c8166ea059459dabb346817beb0e7d.jpg","description":"前端","imgHref":"https://www.boxuegu.com/web/subject/web/index.html?time=20170508","sort":-10,"status":1,"startTime":"2016-10-31 09:09:25","endTime":"2016-11-01 16:11:22","clickCount":3165,"bgColor":null,"delete":false},
+  {"id":17,"createPerson":"lzq","createTime":"2017-02-23 21:31:02","imgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/21/17/dcf3789962ba48109a1a6458022a072b.jpg","description":"php","imgHref":"https://www.boxuegu.com/web/subject/php/index.html?time=20170424","sort":-9,"status":1,"startTime":"2017-02-23 21:31:04","endTime":"2017-03-04 16:45:02","clickCount":448,"bgColor":null,"delete":false},
+  {"id":23,"createPerson":"lzq","createTime":"2017-03-15 17:22:47","imgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/15/17/572ca3a89eea4f94b21f1339ba1e2c87.jpg","description":"传智毕设","imgHref":"http://www.itheima.com/special/openbs/?bxg","sort":-5,"status":1,"startTime":"2017-03-15 17:22:52","endTime":null,"clickCount":271,"bgColor":null,"delete":false},
+  {"id":20,"createPerson":"lzq","createTime":"2017-03-01 10:34:16","imgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/01/10/02d201c429ff46b381edcc6d6ac845dc.jpg","description":"Python","imgHref":"https://www.boxuegu.com/web/html/payCourseDetailPage.html?id=242&courseType=1&free=0","sort":-3,"status":1,"startTime":"2017-03-01 10:34:24","endTime":"2017-03-06 14:30:38","clickCount":583,"bgColor":null,"delete":false}
+],
+  "getOpenCourse":[
+    {"id":130,"menu_id":null,"courseName":"前端","smallimg_path":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/18/15/81848a9ed5f64013b1bc730eee1b93fc.jpg","start_time":null,"end_time":null,"formatStartTime":"05/17  15:00","teacherName":"汪老师","broadcastState":2,"direct_id":"C91C96B1F03FC81F9C33DC5901307461","external_links":null,"direct_seeding":1,"flowers_number":null,"head_img":null,"highest_number_line":null,"hourTime":null,"day":null},
+    {"id":127,"menu_id":null,"courseName":"云计算之大数据","smallimg_path":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/02/21/259595aa81a848dbbd4a078b5ad14848.jpg","start_time":null,"end_time":null,"formatStartTime":"05/26  20:00","teacherName":"毛老师","broadcastState":2,"direct_id":"BDC3C400E13A13C09C33DC5901307461","external_links":null,"direct_seeding":1,"flowers_number":null,"head_img":null,"highest_number_line":null,"hourTime":null,"day":null},
+    {"id":148,"menu_id":null,"courseName":"JavaEE公开课","smallimg_path":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/18/15/46d09fa3d0c04f529c8684cbd579c87b.png","start_time":null,"end_time":null,"formatStartTime":"05/28  15:00","teacherName":"刘老师","broadcastState":2,"direct_id":"E2F32E107E24F9399C33DC5901307461","external_links":null,"direct_seeding":1,"flowers_number":null,"head_img":null,"highest_number_line":null,"hourTime":null,"day":null},
+    {"id":126,"menu_id":null,"courseName":"UI","smallimg_path":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/31/09/7d823e6650984f7bb72233ee66e350cc.jpg","start_time":null,"end_time":null,"formatStartTime":"05/31  20:00","teacherName":"茶茶老师","broadcastState":2,"direct_id":"2C2A076B02BDE9FE9C33DC5901307461","external_links":null,"direct_seeding":1,"flowers_number":null,"head_img":null,"highest_number_line":null,"hourTime":null,"day":null}
+  ],
+  "getLastestInfo":[
+    {"id":17,"name":"1000元高级课程，免费领","informationType":"967940419","create_person":"lzq","create_time":"2017-04-21 10:05:30","is_delete":false,"href_adress":"http://t.cn/RXIvGu5","sort":18,"status":1,"start_time":"2017-04-21 10:05:34","end_time":null,"click_count":248,"is_hot":true},
+    {"id":1,"name":"云计算在线班，挑战年薪30W","informationType":"967940419","create_person":"lzq","create_time":"2016-10-31 09:50:17","is_delete":false,"href_adress":"https://www.boxuegu.com/web/subject/data/index.html?time=20170512","sort":16,"status":1,"start_time":"2016-10-31 09:50:26","end_time":null,"click_count":2264,"is_hot":false},
+    {"id":4,"name":"Web前端在线实战班，不解释","informationType":"967940419","create_person":"lzq","create_time":"2016-10-31 09:54:21","is_delete":false,"href_adress":"https://www.boxuegu.com/web/subject/web/index.html?time=20170508","sort":15,"status":1,"start_time":"2016-10-31 09:54:23","end_time":null,"click_count":2933,"is_hot":true},
+    {"id":14,"name":"传智播客重磅推出传智专修学院","informationType":"967940419","create_person":"lzq","create_time":"2017-02-13 10:19:01","is_delete":false,"href_adress":"http://www.czxy.com/?bxgzx","sort":12,"status":1,"start_time":"2017-02-13 10:19:10","end_time":null,"click_count":332,"is_hot":true},
+    {"id":15,"name":"风靡全球，2017Java高薪年","informationType":"967940419","create_person":"lzq","create_time":"2017-02-20 16:38:23","is_delete":false,"href_adress":"https://www.boxuegu.com/web/subject/JavaEE/index.html?time=20170522","sort":8,"status":1,"start_time":"2017-02-20 16:39:06","end_time":null,"click_count":251,"is_hot":false},
+    {"id":8,"name":"一张贴看完黑马所有薪资","informationType":"null","create_person":"lzq","create_time":"2016-10-31 18:07:47","is_delete":false,"href_adress":"http://bbs.itheima.com/thread-130723-1-1.html","sort":7,"status":1,"start_time":"2016-10-31 18:07:50","end_time":null,"click_count":770,"is_hot":false}
+  ]
+}

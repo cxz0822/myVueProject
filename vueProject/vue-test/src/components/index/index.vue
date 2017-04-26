@@ -2,61 +2,15 @@
     <div class="indexComponents">
         <div class="carousel">
             <el-carousel trigger="click" height="340px" arrow="never">
-                <el-carousel-item v-for="item in 4">
-                    <h3>{{ item }}</h3>
+                <el-carousel-item v-for="item in bannerList">
+                    <a :href="item.imgHref" target="_blank"><img :src="item.imgPath" alt=""/></a>
+                </el-carousel-item>
                 </el-carousel-item>
             </el-carousel>
             <div class="subjectLists-wrap">
                 <ul class="subjectLists">
-                    <li>
-                    <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                    <div class="subjectLists-childrenBox">
-                        <div class="course-classification">
-                            <h2>基础职业课</h2>
-
-                            <div class="course-classification-items">
-                                <img src="web/images/defaultvideo.png" alt=""/>
-
-                                <div class="shadow">
-                                    <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                    <a href="http://www.itheima.com" class="unlineStudy"
-                                       target="_blank">线下学习</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="course-classification">
-                            <h2>微专业</h2>
-
-                            <div class="course-classification-items">
-                                <img src="web/images/defaultvideo.png" alt=""/>
-                            </div>
-                        </div>
-                        <div class="micro-class">
-                            <div class="micro-class-nav clearfix">
-                                <h2>微课堂</h2>
-                                <a href="" class="moreCourse">更多</a>
-                            </div>
-                            <div class="micro-class-category-box">
-                                <ul class="mirco-class-category clearfix">
-                                    <li>HTML/CSS</li>
-                                    <li>Javascript</li>
-                                </ul>
-                                <div class="mirco-class-category-items clearfix">
-                                    <div class="mirco-class-category-items-list">
-                                        <img src="web/images/defaultvideo.png" alt=""/>
-                                        <span>JavaScript网页游戏开发实战班</span>
-                                    </div>
-                                    <div class="mirco-class-category-items-list">
-                                        <img src="web/images/defaultvideo.png" alt=""/>
-                                        <span>JavaScript网页游戏开发实战班</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
+                    <li v-for="item in courseList">
+                        <div class="courseList-nav"><span>{{item.name}}</span><i class="el-icon-arrow-right"></i></div>
                         <div class="subjectLists-childrenBox">
                             <div class="course-classification">
                                 <h2>基础职业课</h2>
@@ -102,390 +56,15 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="courseList-nav"><span>web前端学科</span><i class="el-icon-arrow-right"></i></div>
-                        <div class="subjectLists-childrenBox">
-                            <div class="course-classification">
-                                <h2>基础职业课</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-
-                                    <div class="shadow">
-                                        <a href="" class="onlineStudy" target="_blank">在线学习</a>
-                                        <a href="http://www.itheima.com" class="unlineStudy"
-                                           target="_blank">线下学习</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-classification">
-                                <h2>微专业</h2>
-
-                                <div class="course-classification-items">
-                                    <img src="web/images/defaultvideo.png" alt=""/>
-                                </div>
-                            </div>
-                            <div class="micro-class">
-                                <div class="micro-class-nav clearfix">
-                                    <h2>微课堂</h2>
-                                    <a href="" class="moreCourse">更多</a>
-                                </div>
-                                <div class="micro-class-category-box">
-                                    <ul class="mirco-class-category clearfix">
-                                        <li>HTML/CSS</li>
-                                        <li>Javascript</li>
-                                    </ul>
-                                    <div class="mirco-class-category-items clearfix">
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                        <div class="mirco-class-category-items-list">
-                                            <img src="web/images/defaultvideo.png" alt=""/>
-                                            <span>JavaScript网页游戏开发实战班</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
                 </ul>
                 <div class="subject-entery clearfix">
                     <a href="" class="subject-entery-items">
                         <div class="subject-entery-items-boxes clearfix">
                             <img src="" alt=""/>
+
                             <div class="subject-info">
                                 <h2>asfasdfasdfasdfasdf</h2>
+
                                 <p>asdfasdfasdfasdfasdf</p>
                             </div>
                         </div>
@@ -494,7 +73,68 @@
             </div>
         </div>
         <div class="mainContent">
-          sdfsdfsdf
+            <div class="public-class-live  clearfix">
+                <div class="public-class-live-title picScroll-left clearfix">
+                    <h2>热门公开直播课</h2>
+                    <div class="public-class-live-wrap">
+                        <div class="picScroll-left slide-box">
+                            <a id="left" class="next"><i class="el-icon-arrow-left"></i></a>
+                            <a id="right" class="prev"><i class="el-icon-arrow-right"></i></a>
+                            <div class="bd">
+                                <ul class="public-class-live-content boxContent clearfix">
+                                    <li v-for="$value in openCourseList">
+                                            <a href="javascript:;">
+                                                <div class="img">
+                                                    <img :src="$value.smallimg_path">
+                                                </div>
+                                                <div class="public-class-live-detail">
+                                                    <div class="detailCourseInfo clearfix">
+                                                        <div class="detailCourseName" :title="$value.courseName">{{$value.courseName}}</div>
+                                                        <div class="detailTeacher">讲师：{{$value.teacherName}}</div>
+                                                    </div>
+                                                    <div class="detailLiveInfo clearfix">
+                                                        <div class="detailLiveDate">开始时间：{{$value.formatStartTime}}</div>
+                                                        <div class="detailLiving zhiboStart">
+                                                            <span class="enter-livingClass" :href="$value.external_links" target="_blank">进入教室</span>
+                                                            <img src="../../assets/images/index/zhibo.gif" alt=""/>
+                                                            <span class="living">直播中</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="lastest-news clearfix">
+                   <div class="news-left">
+                     <h2>博学谷新闻</h2>
+                     <img src="../../assets/images/index/news.png" alt=""/>
+                   </div>
+                   <div class="news-right">
+                     <div class="newsTitle">
+                       <p class="biaoti">资讯公告</p>
+                     </div>
+                     <ul class="newsList">
+                         <li v-for="item in lastestInfo">
+                             <a :class="{hotNews :item.is_hot}" :href="item.href_adress" target="_blank" :title="item.name">
+                                 <em :class="{hotNewsEm:item.is_hot}"></em>{{item.name}}
+                             </a>
+                         </li>
+                     </ul>
+                   </div>
+                 </div>
+            </div>
+            <div class="weiKetang">
+                <div class="weiKetang-nav">
+                    <h2>微课堂</h2>
+                    <ul class="weiKetang-nav-list clearfix">
+                        <li v-for="(item,index) in courseList" :class="{active:!index}">{{item.name}}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="indexFooter">
             <div class="indexFooter-wrap">
@@ -549,27 +189,40 @@
     import {requestService} from '../../common/common.js'
     export default {
         name: 'index',
-        created:function(){
-            this.getCourseLists();
-        },
-        methods:{
-            getCourseLists:function(){
-                this.$http({
-                 method:'GET',
-                 data:"json",
-                 url:'static/indexData.json'
-                 }).then(function(response){
-
-                 },function(error){
-
-                 })
-            }
+        data(){
+        return {
+            bannerList: '',
+            courseList: '',
+            openCourseList: '',
+            lastestInfo:''
         }
+    },
+    mounted:function () {
+        this.getCourseLists();
+    },
+    methods:{
+        getCourseLists:function () {
+            this.$http({
+                method: 'GET',
+                url: 'static/indexData.json'
+            }).then(function (response) {
+                var data = response.bodyText;
+                data = JSON.parse(data)
+                this.bannerList = data.getBannerList
+                this.courseList = data.getCourseList
+                this.openCourseList = data.getOpenCourse
+                this.lastestInfo=data.getLastestInfo
+            }, function (error) {
+
+            })
+        }
+    }
     }
 </script>
 
 <style rel="stylesheet" lang="less">
     @import "index.less";
+
     .el-carousel__item h3 {
         color: #475669;
         font-size: 14px;
