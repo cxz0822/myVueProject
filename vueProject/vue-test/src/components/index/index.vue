@@ -80,59 +80,92 @@
                         <div class="picScroll-left slide-box">
                             <a id="left" class="next"><i class="el-icon-arrow-left"></i></a>
                             <a id="right" class="prev"><i class="el-icon-arrow-right"></i></a>
+
                             <div class="bd">
                                 <ul class="public-class-live-content boxContent clearfix">
                                     <li v-for="$value in openCourseList">
-                                            <a href="javascript:;">
-                                                <div class="img">
-                                                    <img :src="$value.smallimg_path">
-                                                </div>
-                                                <div class="public-class-live-detail">
-                                                    <div class="detailCourseInfo clearfix">
-                                                        <div class="detailCourseName" :title="$value.courseName">{{$value.courseName}}</div>
-                                                        <div class="detailTeacher">讲师：{{$value.teacherName}}</div>
+                                        <a href="javascript:;">
+                                            <div class="img">
+                                                <img :src="$value.smallimg_path">
+                                            </div>
+                                            <div class="public-class-live-detail">
+                                                <div class="detailCourseInfo clearfix">
+                                                    <div class="detailCourseName" :title="$value.courseName">
+                                                        {{$value.courseName}}
                                                     </div>
-                                                    <div class="detailLiveInfo clearfix">
-                                                        <div class="detailLiveDate">开始时间：{{$value.formatStartTime}}</div>
-                                                        <div class="detailLiving zhiboStart">
-                                                            <span class="enter-livingClass" :href="$value.external_links" target="_blank">进入教室</span>
-                                                            <img src="../../assets/images/index/zhibo.gif" alt=""/>
-                                                            <span class="living">直播中</span>
-                                                        </div>
+                                                    <div class="detailTeacher">讲师：{{$value.teacherName}}</div>
+                                                </div>
+                                                <div class="detailLiveInfo clearfix">
+                                                    <div class="detailLiveDate">开始时间：{{$value.formatStartTime}}</div>
+                                                    <div class="detailLiving zhiboStart">
+                                                        <span class="enter-livingClass" :href="$value.external_links"
+                                                              target="_blank">进入教室</span>
+                                                        <img src="../../assets/images/index/zhibo.gif" alt=""/>
+                                                        <span class="living">直播中</span>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                 <div class="lastest-news clearfix">
-                   <div class="news-left">
-                     <h2>博学谷新闻</h2>
-                     <img src="../../assets/images/index/news.png" alt=""/>
-                   </div>
-                   <div class="news-right">
-                     <div class="newsTitle">
-                       <p class="biaoti">资讯公告</p>
-                     </div>
-                     <ul class="newsList">
-                         <li v-for="item in lastestInfo">
-                             <a :class="{hotNews :item.is_hot}" :href="item.href_adress" target="_blank" :title="item.name">
-                                 <em :class="{hotNewsEm:item.is_hot}"></em>{{item.name}}
-                             </a>
-                         </li>
-                     </ul>
-                   </div>
-                 </div>
+                <div class="lastest-news clearfix">
+                    <div class="news-left">
+                        <h2>博学谷新闻</h2>
+                        <img src="../../assets/images/index/news.png" alt=""/>
+                    </div>
+                    <div class="news-right">
+                        <div class="newsTitle">
+                            <p class="biaoti">资讯公告</p>
+                        </div>
+                        <ul class="newsList">
+                            <li v-for="item in lastestInfo">
+                                <a :class="{hotNews :item.is_hot}" :href="item.href_adress" target="_blank"
+                                   :title="item.name">
+                                    <em :class="{hotNewsEm:item.is_hot}"></em>{{item.name}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="weiKetang">
                 <div class="weiKetang-nav">
                     <h2>微课堂</h2>
                     <ul class="weiKetang-nav-list clearfix">
-                        <li v-for="(item,index) in courseList" :class="{active:!index}">{{item.name}}</li>
+                        <li v-for="(item,index) in courseList" v-on:click="microClassNav()" :class="{active:!index}">{{item.name}}</li>
                     </ul>
+                    <div class="weiKetang-courseList  content clearfix">
+                        <div v-for="$value in mircoCourseList" class="course clearfix">
+                            <div class="img"> <img :src="$value.smallImgPath" alt=""/></div>
+                            <div class="detail">
+                                <p class="title" :title="$value.gradeName">
+                                    {{$value.gradeName}}</p>
+
+                                <p class="timeAndTeac">
+                                    <span>{{$value.courseLength}}</span><i>|</i>
+                                    <span>讲师：<span class="teacher">{{$value.name}}</span></span>
+                                </p>
+
+                                <p class="info clearfix">
+                                        <span>
+                                            <span class="pricefree" v-if=$value.free>免费</span>
+                                    <span v-else=!$value.free>
+                                    <i>￥</i><span class="price">{{$value.currentPrice}}</span>
+                                    <del><i class="price1">￥</i>{{$value.originalCost}}</del>
+                                    </span>
+                                    </span>
+                                            <span class="stuCount"><img src="../../assets/images/index/studentCount.png" alt=""/>
+                                                <span class="studentCou">{{$value.learnd_count}}</span>
+                                            </span>
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,23 +173,30 @@
             <div class="indexFooter-wrap">
                 <div class="indexFooter-left">
                     <h2>博学谷云课堂</h2>
-                    <p>博学谷云课堂，是传智播客旗下的在线教育品牌。专注整合传智优势教学资源、打造适合在线学习并能保证教学结果的优质教学产品，同时打造和运营一整套教育生态软件体系，为用户提供满足自身成长和发展要求的有效服务。</p>
+
+                    <p>
+                        博学谷云课堂，是传智播客旗下的在线教育品牌。专注整合传智优势教学资源、打造适合在线学习并能保证教学结果的优质教学产品，同时打造和运营一整套教育生态软件体系，为用户提供满足自身成长和发展要求的有效服务。</p>
                 </div>
                 <div class="indexFooter-middle">
                     <h2>关注我们</h2>
+
                     <div class="aboutUs">
                         <div class="aboutUs-weiBo">
                             <img src="../../assets/images/footer/weibo.png" alt=""/>
+
                             <div class="aboutUs-weiBo-hover">
                                 <img src="../../assets/images/footer/weiboImg.png" alt=""/>
+
                                 <p>关注博学谷新浪微博获取更多行业即时资讯</p>
                                 <img class="indexSanjiao" src="../../assets/images/footer/index03.png" alt=""/>
                             </div>
                         </div>
                         <div class="aboutUs-weiXin">
                             <img src="../../assets/images/footer/weixin.png" alt=""/>
+
                             <div class="aboutUs-weiXin-hover">
                                 <img src="../../assets/images/footer/weixinImg.png" alt=""/>
+
                                 <p>关注博学谷微信公众号每日获取最新学习资料</p>
                                 <img class="indexSanjiao" src="../../assets/images/footer/index03.png" alt=""/>
                             </div>
@@ -166,6 +206,7 @@
                 <div class="indexFooter-right">
                     <div class="firendLink">
                         <h2>友情链接</h2>
+
                         <div class="firendLink-div">
                             <a href="http://www.itcast.cn" target="_blank">传智播客</a>
                             <a href="http://bbs.itcast.cn" target="_blank">传智播客论坛</a>
@@ -186,37 +227,50 @@
 </template>
 
 <script type="text/ecmascript-6">
+    import $ from 'jquery'
+    import '../../lib/jquery.SuperSlide.2.1.1.js'
     import {requestService} from '../../common/common.js'
     export default {
         name: 'index',
         data(){
-        return {
-            bannerList: '',
-            courseList: '',
-            openCourseList: '',
-            lastestInfo:''
-        }
-    },
-    mounted:function () {
-        this.getCourseLists();
-    },
-    methods:{
-        getCourseLists:function () {
-            this.$http({
-                method: 'GET',
-                url: 'static/indexData.json'
-            }).then(function (response) {
-                var data = response.bodyText;
-                data = JSON.parse(data)
-                this.bannerList = data.getBannerList
-                this.courseList = data.getCourseList
-                this.openCourseList = data.getOpenCourse
-                this.lastestInfo=data.getLastestInfo
-            }, function (error) {
+            return {
+                bannerList: '',
+                courseList: '',
+                openCourseList: '',
+                lastestInfo: '',
+                mircoCourseList: ''
+            }
+        },
+        mounted: function () {
+            this.getCourseLists();
+            this.lunbotu();
+        },
+        methods: {
+            getCourseLists: function () {
+                this.$http({
+                    method: 'GET',
+                    url: 'static/indexData.json'
+                }).then(function (response) {
+                    var data = response.bodyText;
+                    data = JSON.parse(data)
+                    this.bannerList = data.getBannerList
+                    this.courseList = data.getCourseList
+                    this.openCourseList = data.getOpenCourse
+                    this.lastestInfo = data.getLastestInfo
+                    this.mircoCourseList = data.getMicroClassList
+                }, function (error) {
 
-            })
+                })
+            },
+            lunbotu:function(){
+                jQuery(".public-class-live-wrap .slide-box").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:2,scroll:1});
+            },
+            microClassNav:function(){
+                $(".weiKetang-nav-list li").click(function(){
+                    $(this).addClass("active").siblings().removeClass("active");
+                })
+            }
         }
-    }
     }
 </script>
 
