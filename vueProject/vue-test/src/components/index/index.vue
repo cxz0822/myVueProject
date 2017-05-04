@@ -80,7 +80,6 @@
                         <div class="picScroll-left slide-box">
                             <a id="left" class="next"><i class="el-icon-arrow-left"></i></a>
                             <a id="right" class="prev"><i class="el-icon-arrow-right"></i></a>
-
                             <div class="bd">
                                 <ul class="public-class-live-content boxContent clearfix">
                                     <li v-for="$value in openCourseList">
@@ -139,7 +138,7 @@
                         <li v-for="(item,index) in courseList" v-on:click="microClassNav()" :class="{active:!index}">{{item.name}}</li>
                     </ul>
                     <div class="weiKetang-courseList  content clearfix">
-                        <div v-for="$value in mircoCourseList" class="course clearfix">
+                        <a v-for="$value in mircoCourseList" class="course clearfix" href="#/courseDetail">
                             <div class="img"> <img :src="$value.smallImgPath" alt=""/></div>
                             <div class="detail">
                                 <p class="title" :title="$value.gradeName">
@@ -164,7 +163,7 @@
                                 </p>
                             </div>
                             </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -227,7 +226,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-    import $ from 'jquery'
     import '../../lib/jquery.SuperSlide.2.1.1.js'
     import {requestService} from '../../common/common.js'
     export default {
@@ -243,7 +241,7 @@
         },
         mounted: function () {
             this.getCourseLists();
-            this.lunbotu();
+/*           jQuery(".public-class-live-wrap .slide-box").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:2,scroll:1});*/
         },
         methods: {
             getCourseLists: function () {
@@ -262,9 +260,6 @@
 
                 })
             },
-            lunbotu:function(){
-                jQuery(".public-class-live-wrap .slide-box").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:2,scroll:1});
-            },
             microClassNav:function(){
                 $(".weiKetang-nav-list li").click(function(){
                     $(this).addClass("active").siblings().removeClass("active");
@@ -274,7 +269,7 @@
     }
 </script>
 
-<style rel="stylesheet" lang="less">
+<style  rel="stylesheet" lang="less">
     @import "index.less";
 
     .el-carousel__item h3 {

@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Resource from 'vue-resource'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-
+import $ from 'jquery'
 /**--ElementUI按需加载- start-*/
 Vue.use(Resource);
 Vue.use(Element);
