@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b77b9e92-3fdc-4149-ae15-07c1c4e385fa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/common/common.js" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/common/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/pages/courseDetail/courseDetail.css" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/pages/courseDetail/courseDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/pages/courseDetail/courseDetail.less" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/pages/courseDetail/courseDetail.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/pages/courseDetail/courseDetail.vue" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/pages/courseDetail/courseDetail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/pages/index/index.css" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/pages/index/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/pages/index/index.less" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/pages/index/index.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/pages/index/index.vue" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/pages/index/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueProject/vue-test/src/main.js" afterPath="$PROJECT_DIR$/vueProject/vue-test/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b77b9e92-3fdc-4149-ae15-07c1c4e385fa" name="Default" comment="" />
     <ignored path="myVueProject.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -501,7 +491,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -711,7 +701,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
