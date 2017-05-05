@@ -136,23 +136,22 @@
       <div class="weiKetang">
         <div class="weiKetang-nav">
           <h2>微课堂</h2>
-          <ul class="weiKetang-nav-list clearfix">
-            <li v-for="(item,index) in courseList" v-on:click="microClassNav()" :class="{active:!index}">{{item.name}}
-            </li>
-          </ul>
-          <div class="weiKetang-courseList  content clearfix">
-            <a v-for="$value in mircoCourseList" class="course clearfix" href="#/courseDetail">
-              <div class="img"><img :src="$value.smallImgPath" alt=""/></div>
-              <div class="detail">
-                <p class="title" :title="$value.gradeName">
-                  {{$value.gradeName}}</p>
+          <el-tabs v-model="activeName" @tab-click="handleClick">
+            <el-tab-pane v-for="(item,index) in courseList" :label="item.name" :name="item.name">
+              <div class="weiKetang-courseList  content clearfix">
+                <router-link v-for="$value in mircoCourseList" class="course clearfix" :to="{name:'courseDetail',params:{courseId:$value.id}}" :key="$value.id">
+                  <div class="img"><img :src="$value.smallImgPath" alt=""/></div>
+                  <span class="classCategory">{{$value.courseType}}</span>
+                  <div class="detail">
+                    <p class="title" :title="$value.gradeName">
+                      {{$value.gradeName}}</p>
 
-                <p class="timeAndTeac">
-                  <span>{{$value.courseLength}}</span><i>|</i>
-                  <span>讲师：<span class="teacher">{{$value.name}}</span></span>
-                </p>
+                    <p class="timeAndTeac">
+                      <span>{{$value.courseLength}}</span><i>|</i>
+                      <span>讲师：<span class="teacher">{{$value.name}}</span></span>
+                    </p>
 
-                <p class="info clearfix">
+                    <p class="info clearfix">
                   <span>
                     <span class="pricefree" v-if=$value.free>免费</span>
                     <span v-else=!$value.free>
@@ -163,10 +162,13 @@
                   <span class="stuCount"><img src="../../assets/images/index/studentCount.png" alt=""/>
                     <span class="studentCou">{{$value.learnd_count}}</span>
                   </span>
-                </p>
+                    </p>
+                  </div>
+                </router-link>
               </div>
-            </a>
-          </div>
+            </el-tab-pane>
+          </el-tabs>
+
         </div>
       </div>
     </div>
@@ -225,6 +227,7 @@
     name: 'index',
     data(){
     return {
+      activeName: '前端',
       bannerList: "",
       courseList: "",
       openCourseList: "",
@@ -243,8 +246,8 @@
         this.lastestInfo = data.getLastestInfo
         this.mircoCourseList = data.getMicroClassList
         this.friendLink=data.friendLink
+         /*jQuery(".public-class-live-wrap .slide-box").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:2,scroll:1});*/
       }.bind(this))
-      /* jQuery(".public-class-live-wrap .slide-box").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:2,scroll:1});*/
     }
   })
   },
@@ -253,6 +256,9 @@
       $(".weiKetang-nav-list li").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
       })
+    },
+    handleClick(tab, event) {
+      console.log(tab, event);
     }
   }
   }

@@ -33,18 +33,13 @@
             </div>
             <div class="courseDetail-bottomInfo clearfix">
               <div class="left">
-                <ul class="courseDetail-navItems clearfix">
-                  <li class="active" @click="changeTab">课程详情</li>
-                  <li @click="changeTab">课程大纲</li>
-                  <li @click="changeTab">授课老师</li>
-                  <li @click="changeTab">常见问题</li>
-                  <li @click="changeTab">学员评价</li>
-                </ul>
-                <div class="course-detail">课程详情</div>
-                <div class="course-outline">课程大纲</div>
-                <div class="course-teacher">授课老师</div>
-                <div class="course-problem">常见问题</div>
-                <div class="course-appraise">学员评价</div>
+                <el-tabs v-model="activeName" @tab-click="handleClick">
+                  <el-tab-pane label="课程详情" name="first">课程详情</el-tab-pane>
+                  <el-tab-pane label="课程大纲" name="second">课程大纲</el-tab-pane>
+                  <el-tab-pane label="授课老师" name="third">授课老师</el-tab-pane>
+                  <el-tab-pane label="常见问题" name="fourth">常见问题</el-tab-pane>
+                  <el-tab-pane label="学员评价" name="fifth">学员评价</el-tab-pane>
+                </el-tabs>
               </div>
               <div class="right">
                 <div class="right-box">
@@ -77,14 +72,23 @@
 </template>
 
 <script>
+  import {requestService,getOkData} from '../../common/common.js'
     export default {
         name: 'courseDetail',
+        data(){
+          return {
+            courseDetail:"",
+            activeName: 'first'
+          }
+        },
+        mounted(){
+     /*   requestService(this,{type:'jsonp',url:'https://www.boxuegu.com/course/getCourseById',data:{"courserId":279},successCallback(callback){
+
+        }})*/
+    },
         methods:{
-          changeTab:function(){
-            $(".courseDetail-navItems li").click(function(){
-              $(this).addClass("active").siblings().removeClass("active");
-              $(".left div").eq($(this).index()).show().siblings("div").hide();
-            })
+          handleClick(tab, event) {
+            console.log(tab, event);
           }
         }
     }

@@ -513,23 +513,35 @@
 .indexComponents .mainContent .weiKetang h2 {
   display: inline-block;
 }
-.indexComponents .mainContent .weiKetang .weiKetang-nav-list {
+.indexComponents .mainContent .weiKetang .el-tabs {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
+  margin-top: 10px;
 }
-.indexComponents .mainContent .weiKetang .weiKetang-nav-list li {
+.indexComponents .mainContent .weiKetang .el-tabs .el-tabs__header {
+  border: none;
+  width: 1000px;
+  height: 26px;
+  margin: 0;
+  left: 80px;
+  top: -35px;
+}
+.indexComponents .mainContent .weiKetang .el-tabs .el-tabs__content {
+  top: -35px;
+}
+.indexComponents .mainContent .weiKetang .el-tabs .el-tabs__item {
   float: left;
-  margin-left: 30px;
   font-size: 16px;
+  height: 26px;
   line-height: 26px;
   color: #999;
   cursor: pointer;
 }
-.indexComponents .mainContent .weiKetang .weiKetang-nav-list li.active {
-  color: #36b733;
+.indexComponents .mainContent .weiKetang .el-tabs .el-tabs__active-bar {
+  background-color: transparent;
 }
-.indexComponents .mainContent .weiKetang .weiKetang-nav-list li:hover {
-  color: #36b733;
+.indexComponents .mainContent .weiKetang .el-tabs .is-active {
+  color: #2cb82c;
 }
 .indexComponents .mainContent .weiKetang .content {
   position: relative;

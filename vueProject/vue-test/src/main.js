@@ -17,6 +17,9 @@ Vue.config.productionTip = false;
 Vue.config.devtools = true //配置是否允许 vue-devtools 检查代码。
 Vue.config.productionTip = false //false关闭生产模式下给出的提示
 
+//vue-resource全局配置
+Vue.http.options.emulateJSON = true//允许服务器支持restful风格的接口
+Vue.http.options.emulateHTTP = true//允许post传递json格式的参数请求
 
 /* eslint-disable no-new */
 const app=new Vue({

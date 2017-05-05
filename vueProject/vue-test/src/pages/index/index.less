@@ -530,22 +530,35 @@
       h2{
         display:inline-block;
       }
-      .weiKetang-nav-list{
+
+      .el-tabs{
         display:inline-block;
-        vertical-align: bottom;
-        li{
+        vertical-align: middle;
+        margin-top:10px;
+        .el-tabs__header{
+          border:none;
+          width:1000px;
+          height:26px;
+          margin: 0;
+          left: 80px;
+          top: -35px;
+        }
+        .el-tabs__content{
+          top:-35px;
+        }
+        .el-tabs__item{
           float:left;
-          margin-left:30px;
           font-size:16px;
+          height:26px;
           line-height:26px;
           color:#999;
           cursor:pointer;
-          &.active{
-            color: #36b733;
-          }
-          &:hover{
-            color:#36b733;
-          }
+        }
+        .el-tabs__active-bar{
+          background-color:transparent;
+        }
+        .is-active{
+          color:#2cb82c;
         }
       }
       .content {
