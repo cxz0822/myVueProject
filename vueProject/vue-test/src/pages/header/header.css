@@ -1,0 +1,130 @@
+.header .left {
+  float: left;
+}
+.header .right {
+  float: right;
+}
+.header .header-top {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #eee;
+}
+.header .header-top .header-top-wrap {
+  width: 1200px;
+  height: 40px;
+  margin: 0 auto;
+  color: #999;
+  font-size: 14px;
+  line-height: 40px;
+}
+.header .header-middle {
+  background: #fff;
+}
+.header .header-middle .header-middle-bg {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 10px;
+}
+.header .header-middle .header-middle-bg .left span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  color: #333;
+  margin-left: 20px;
+  margin-top: -35px;
+  font-weight: bold;
+}
+.header .header-middle .header-middle-bg .right {
+  margin-top: 15px;
+}
+.header .header-middle .header-middle-bg .right a {
+  font-size: 14px;
+  color: #333;
+  margin-right: 30px;
+  display: inline-block;
+}
+.header .header-middle .header-middle-bg .right .separator {
+  color: #ccc;
+  margin: 0 3px;
+}
+.header .header-middle .header-middle-bg .right .loginAndRegister {
+  display: inline-block;
+}
+.header .header-middle .header-middle-bg .right .loginAndRegister a {
+  margin-right: 0;
+}
+.header .header-middle .header-middle-bg .right .loginAndRegister i {
+  color: #ccc;
+  font-size: 12px;
+}
+.header .header-bottom {
+  background-color: #fff;
+}
+.header .header-bottom .header-bottom-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header .header-bottom .header-bottom-wrap .allSubjects,
+.header .header-bottom .header-bottom-wrap .courseType {
+  float: left;
+}
+.header .header-bottom .header-bottom-wrap .allSubjects {
+  width: 220px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #5fcd5a;
+  font-size: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.header .header-bottom .header-bottom-wrap .courseType {
+  height: 50px;
+  margin-left: 30px;
+  line-height: 50px;
+}
+.header .header-bottom .header-bottom-wrap .courseType li {
+  float: left;
+  margin-right: 35px;
+  cursor: pointer;
+}
+.header .header-bottom .header-bottom-wrap .courseType li .microMajor span {
+  font-size: 16px;
+  color: #333;
+}
+.header .header-bottom .header-bottom-wrap .courseType li .microMajor i {
+  font-size: 12px;
+  color: #ccc;
+}
+.header .header-bottom .header-bottom-wrap .courseType li.active {
+  color: #5fcd5a;
+}
+.header .header-bottom .header-bottom-wrap .courseType li.active a {
+  color: #5fcd5a;
+}
+.header .header-bottom .header-bottom-wrap .courseType li:hover {
+  color: #5fcd5a;
+}
+.header .header-bottom .header-bottom-wrap .searchBox {
+  position: relative;
+  float: right;
+  width: 204px;
+  height: 36px;
+  margin-top: 5px;
+}
+.header .header-bottom .header-bottom-wrap .searchBox .searchInput {
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  text-indent: 12px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.header .header-bottom .header-bottom-wrap .searchBox .searchBtn {
+  position: absolute;
+  right: 20px;
+  top: 11px;
+  color: #ccc;
+}

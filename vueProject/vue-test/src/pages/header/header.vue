@@ -9,7 +9,7 @@
         <div class="header-middle">
             <div class="header-middle-bg clearfix">
                 <div class="left">
-                    <img src="../../assets/images/index/logo.png" alt=""/><span>黑马程序员线上平台</span>
+                  <a href="#/home"><img src="../../assets/images/index/logo.png" alt=""/><span>黑马程序员线上平台</span></a>
                 </div>
                 <div class="right">
                     <router-link to="">学习中心</router-link>
@@ -37,7 +37,7 @@
             <div class="header-bottom-wrap clearfix">
                 <div class="allSubjects">全部学科</div>
                 <ul class="courseType clearfix">
-                    <li class="active">首页</li>
+                    <li class="active"><a href="#/home">首页</a></li>
                     <li>就业课</li>
                     <li>
                         <div class="microMajor">

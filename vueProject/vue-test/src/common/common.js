@@ -1,13 +1,13 @@
 /**
  * Created by admin on 2017/4/25.
  */
-/*-------------------³£Á¿----start-----------*/
-const domainName=' ';//¿çÓòÇëÇóÓòÃû
-/*-------------------³£Á¿----end-----------*/
+/*-------------------å¸¸é‡----start-----------*/
+const domainName='';//ä»£ç†æœåŠ¡å™¨ä¸­é—´ä»¶æ‰€éœ€è¦çš„è¯·æ±‚å‰ç¼€ todo æ‰“åŒ…ç”Ÿäº§ç¯å¢ƒæ—¶è¦è®¾ä¸º '/'/*/recruitment-web/*/
+/*-------------------å¸¸é‡----end-----------*/
 
-/*-------------------¹«¹²º¯Êı----start-----------*/
+/*-------------------å…¬å…±å‡½æ•°----start-----------*/
 let requestService = function (_vm, getparams) {
-  let getParasObj = getparams || {//ÕâÊÇÄ¬ÈÏµÄ²ÎÊı
+  let getParasObj = getparams || {//è¿™æ˜¯é»˜è®¤çš„å‚æ•°
       type: 'get',
       url: '',
       data: {},
@@ -15,26 +15,29 @@ let requestService = function (_vm, getparams) {
       },
       errorCallback: function (response) {
       }
-    }
-  //ÕâÊÇvue-resourceµÄÊı¾İÇëÇó·½Ê½
+    };
+  //è¿™æ˜¯vue-resourceçš„æ•°æ®è¯·æ±‚æ–¹å¼
   _vm.$http({
-    method: getParasObj.type || 'get',//Ä¬ÈÏget
+    method: getParasObj.type || 'get',//é»˜è®¤get
     url: domainName + getParasObj.url,
-    params: getParasObj.data || {} //Ä¬ÈÏÃ»ÓĞ²ÎÊı
+    params: getParasObj.data || {} //é»˜è®¤æ²¡æœ‰å‚æ•°
   }).then(getParasObj.successCallback, getParasObj.errorCallback);
 };
 /**
- * »ñÈ¡response.okµÄÊı¾İ
+ * è·å–response.okçš„æ•°æ®
  * @param response
  * @param callback
+ * @param _vm ï¼šthis
  */
 let getOkData = function (response, callback) {
   if (response.ok && callback) {
     callback(response.body);
   }
 }
-/*-----------------;--¹«¹²º¯Êı----end-----------*/
-/*-------------------³£Á¿----start-----------*/
-/*-------------------³£Á¿----end-----------*/
-/*-------------------³£Á¿----start-----------*/
-/*-------------------³£Á¿----end-----------*/
+/*-----------------;--å…¬å…±å‡½æ•°----end-----------*/
+//å¯¼å‡º
+export{
+  domainName,
+  requestService,
+  getOkData
+  }

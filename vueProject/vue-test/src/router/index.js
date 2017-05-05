@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Header from '../components/header/header'
-import Content from '../components/content'
-import Footer from '../components/footer/footer'
+import Header from '../pages/header/header'
+import Content from '../pages/content'
+import Footer from '../pages/footer/footer'
 Vue.use(Router);
 
 export default new Router({
@@ -17,16 +17,16 @@ export default new Router({
         content:Content,
         footer:Footer
       },
-      children:[//°üº¬Í·Î²µÄ
-        {//Ê×Ò³
+      children:[//ï¿½ï¿½ï¿½ï¿½Í·Î²ï¿½ï¿½
+        {//ï¿½ï¿½Ò³
           path:'/home',
           name:'index',
-          component:resolve => require(['../components/index/index'],resolve)
+          component:resolve => require(['../pages/index/index'],resolve)
         },
-        {//¿Î³ÌÏêÇéÒ³
+        {//ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½Ò³
           path:'/courseDetail',
           name:'courseDetail',
-          component:resolve => require(['../components/courseDetail/courseDetail'],resolve)
+          component:resolve => require(['../pages/courseDetail/courseDetail'],resolve)
         }
        ]
     }

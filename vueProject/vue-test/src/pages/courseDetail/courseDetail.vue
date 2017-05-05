@@ -40,11 +40,11 @@
                   <li @click="changeTab">常见问题</li>
                   <li @click="changeTab">学员评价</li>
                 </ul>
-                <div class="course-appraise">学员评价</div>
-                <div class="course-problem">常见问题</div>
-                <div class="course-teacher">授课老师</div>
-                <div class="course-outline">课程大纲</div>
                 <div class="course-detail">课程详情</div>
+                <div class="course-outline">课程大纲</div>
+                <div class="course-teacher">授课老师</div>
+                <div class="course-problem">常见问题</div>
+                <div class="course-appraise">学员评价</div>
               </div>
               <div class="right">
                 <div class="right-box">
@@ -83,7 +83,7 @@
           changeTab:function(){
             $(".courseDetail-navItems li").click(function(){
               $(this).addClass("active").siblings().removeClass("active");
-              $(".left div").eq($(this).index()).show().siblings().hide();
+              $(".left div").eq($(this).index()).show().siblings("div").hide();
             })
           }
         }
