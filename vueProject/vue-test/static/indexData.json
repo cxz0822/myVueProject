@@ -69,6 +69,18 @@
     {"createPerson":null,"createTime":null,"id":131,"gradeName":"跨平台UI设计","smallImgPath":"https://attachment-center.boxuegu.com/data/picture/online/2017/03/16/11/be31ea66fbb24004b8b8c104bb04cba7.png","name":"陈老师、方老师等","learnd_count":272,"courseType":"点播","currentPrice":"428.00","originalCost":"1088.00","courseLength":24.0,"pageNumber":null,"pageSize":null,"totalPageCount":null,"description_show":0,"recImgPath":null,"free":false,"delete":false},
     {"createPerson":null,"createTime":null,"id":108,"gradeName":"网页设计精品班","smallImgPath":"https://attachment-center.boxuegu.com/data/picture/online/2016/11/17/18/a805e6ac7a344df5aa38777866b3aa80.jpg","name":"陈老师、方老师等","learnd_count":27,"courseType":"点播","currentPrice":"1200.00","originalCost":"2890.00","courseLength":30.0,"pageNumber":null,"pageSize":null,"totalPageCount":null,"description_show":0,"recImgPath":null,"free":false,"delete":false},
     {"createPerson":null,"createTime":null,"id":109,"gradeName":"UI设计精品班","smallImgPath":"https://attachment-center.boxuegu.com/data/picture/online/2016/11/18/16/fa86abe22cab439cad070810043bbe9f.jpg","name":"陈老师、方老师等","learnd_count":30,"courseType":"点播","currentPrice":"1500.00","originalCost":"2998.00","courseLength":30.0,"pageNumber":null,"pageSize":null,"totalPageCount":null,"description_show":0,"recImgPath":null,"free":false,"delete":false}
+  ],
+  "friendLink":[
+    {"id":66,"createPerson":"在线管理员","createTime":"2016-09-07 09:44:51","name":"传智播客","url":"http://www.itcast.cn","logo":null,"sort":7,"status":"1","delete":false},
+    {"id":73,"createPerson":"在线管理员","createTime":"2016-09-14 16:44:54","name":"传智播客论坛","url":"http://bbs.itcast.cn","logo":null,"sort":10,"status":"1","delete":false},
+    {"id":75,"createPerson":"慕白","createTime":"2017-02-23 15:59:22","name":"黑马程序员论坛","url":"http://bbs.itheima.com/forum.php","logo":null,"sort":11,"status":"1","delete":false},
+    {"id":72,"createPerson":"在线管理员","createTime":"2016-09-14 16:20:52","name":"传智播客公开课","url":"http://open.itcast.cn","logo":null,"sort":21,"status":"1","delete":false},
+    {"id":74,"createPerson":"令狐轩","createTime":"2016-12-13 18:39:29","name":"传智教材资源下载","url":"http://yx.boxuegu.com/","logo":null,"sort":23,"status":"1","delete":false},
+    {"id":49,"createPerson":"李守兴","createTime":"2016-01-13 16:29:53","name":"CSDN","url":"http://www.csdn.net","logo":null,"sort":41,"status":"1","delete":false},
+    {"id":51,"createPerson":"喵萌萌","createTime":"2016-06-17 00:00:00","name":"黑马程序员","url":"http://www.itheima.com","logo":null,"sort":43,"status":"1","delete":false},
+    {"id":67,"createPerson":"在线管理员","createTime":"2016-09-07 09:48:50","name":"传智云课堂","url":"http://yun.itcast.cn","logo":null,"sort":44,"status":"1","delete":false},
+    {"id":70,"createPerson":"在线管理员","createTime":"2016-09-07 09:51:55","name":"逆袭","url":"http://up.boxuegu.com","logo":null,"sort":45,"status":"1","delete":false},
+    {"id":68,"createPerson":"在线管理员","createTime":"2016-09-07 09:51:00","name":"博学谷视频库","url":"http://dvd.boxuegu.com","logo":null,"sort":46,"status":"1","delete":false}
   ]
 
 }

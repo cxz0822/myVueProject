@@ -2,7 +2,7 @@
   <div class="indexComponents">
     <div class="carousel">
       <el-carousel trigger="click" height="340px" arrow="never">
-        <el-carousel-item v-for="item in bannerList">
+        <el-carousel-item v-for="item in bannerList" :key="item.id">
           <a :href="item.imgHref" target="_blank"><img :src="item.imgPath" alt=""/></a>
         </el-carousel-item>
         </el-carousel-item>
@@ -16,7 +16,7 @@
                 <h2>基础职业课</h2>
 
                 <div class="course-classification-items">
-                  <img src="web/images/defaultvideo.png" alt=""/>
+                  <img src="" alt=""/>
 
                   <div class="shadow">
                     <a href="" class="onlineStudy" target="_blank">在线学习</a>
@@ -29,7 +29,7 @@
                 <h2>微专业</h2>
 
                 <div class="course-classification-items">
-                  <img src="web/images/defaultvideo.png" alt=""/>
+                  <img src="" alt=""/>
                 </div>
               </div>
               <div class="micro-class">
@@ -44,11 +44,11 @@
                   </ul>
                   <div class="mirco-class-category-items clearfix">
                     <div class="mirco-class-category-items-list">
-                      <img src="web/images/defaultvideo.png" alt=""/>
+                      <img src="" alt=""/>
                       <span>JavaScript网页游戏开发实战班</span>
                     </div>
                     <div class="mirco-class-category-items-list">
-                      <img src="web/images/defaultvideo.png" alt=""/>
+                      <img src="" alt=""/>
                       <span>JavaScript网页游戏开发实战班</span>
                     </div>
                   </div>
@@ -209,16 +209,7 @@
             <h2>友情链接</h2>
 
             <div class="firendLink-div">
-              <a href="http://www.itcast.cn" target="_blank">传智播客</a>
-              <a href="http://bbs.itcast.cn" target="_blank">传智播客论坛</a>
-              <a href="http://bbs.itheima.com/forum.php" target="_blank">黑马程序员论坛</a>
-              <a href="http://open.itcast.cn" target="_blank">传智播客公开课</a>
-              <a href="http://yx.boxuegu.com/" target="_blank">传智教材资源下载</a>
-              <a href="http://www.csdn.net" target="_blank">CSDN</a>
-              <a href="http://www.itheima.com" target="_blank">黑马程序员</a>
-              <a href="http://yun.itcast.cn" target="_blank">传智云课堂</a>
-              <a href="http://up.boxuegu.com" target="_blank">逆袭</a>
-              <a href="http://dvd.boxuegu.com" target="_blank">博学谷视频库</a>
+              <a v-for="item in friendLink" :href="item.url" target="_blank">{{item.name}}</a>
             </div>
           </div>
         </div>
@@ -238,7 +229,8 @@
       courseList: "",
       openCourseList: "",
       lastestInfo: "",
-      mircoCourseList: ""
+      mircoCourseList: "",
+      friendLink:""
     }
   },
   mounted(){
@@ -250,6 +242,7 @@
         this.openCourseList = data.getOpenCourse
         this.lastestInfo = data.getLastestInfo
         this.mircoCourseList = data.getMicroClassList
+        this.friendLink=data.friendLink
       }.bind(this))
       /* jQuery(".public-class-live-wrap .slide-box").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:2,scroll:1});*/
     }
