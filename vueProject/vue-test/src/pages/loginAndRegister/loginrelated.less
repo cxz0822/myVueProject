@@ -1,0 +1,141 @@
+/*登录弹框样式*/
+.el-dialog__wrapper{
+  .el-dialog__close:hover{
+    color:#2cb82c;
+  }
+  .el-dialog__body{
+    padding:30px 74px 60px;
+    .login-component{
+      .title{
+        font-size:20px;
+        text-align:center;
+        margin-bottom:32px;
+        color:#333;
+      }
+    }
+  }
+}
+.el-form{
+  width:310px;
+  margin:15px auto 50px;
+}
+.el-form-item__content{
+  .el-input{
+    input{
+      width:310px;
+      height:46px;
+      box-sizing: border-box;
+      border:none;
+      background-color:#f6f6f6;
+      color:#666;
+      &:focus{
+        border:1px solid #2cb82c;
+      }
+    }
+  }
+}
+
+.dialog-footer{
+  .el-button{
+    width:310px;
+    height:46px;
+    box-sizing:border-box;
+    background-color:#2cb82c;
+    color:#fff;
+    font-size:16px;
+    border:none;
+    margin-top:16px;
+  }
+  .foot-p{
+    margin-top:16px;
+    span{
+      font-size:14px;
+      color:#999;
+      cursor:pointer;
+      a{
+        font-size:14px;
+        color:#999;
+      }
+      &:nth-child(1){
+        float:left;
+      }
+      &:nth-child(2){
+        float:right;
+      }
+    }
+  }
+}
+
+/*登录注册页面样式*/
+.loginAndRegister-component{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:url('../../assets/images/loginRegister/bgImg.png')center center;
+  .loginAndRegister-wrap{
+    width:460px;
+    margin:80px auto 0;
+    .title{
+      em{
+        box-sizing: border-box;
+        border:1px solid #ddd;
+        width:134px;
+        -webkit-transform: scaleY(0.5);
+        -moz-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+        -o-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+      }
+      img{
+        display:inline-block;
+        margin:0 20px;
+        height:51px;
+        width:152px;
+        vertical-align: middle;
+      }
+    }
+    .el-tabs{
+      margin-top:40px;
+      border:1px solid #ddd;
+      .el-tabs__header{
+        .el-tabs__item{
+          width:230px;
+          height:70px;
+          font-size:20px;
+          color:#333;
+          text-align:center;
+          line-height:70px;
+          background-color:#f8f8f8;
+          border:none;
+        }
+        .is-active{
+          background-color:#fff;
+        }
+      }
+    }
+  }
+}
+//图形验证码
+.messageCode{
+  .el-form-item__content{
+    .el-input{
+      display:inline-block;
+      width:200px;
+      vertical-align: top;
+    }
+    input{
+      height:46px;
+      width:200px;
+    }
+  }
+  .codeBtn{
+    display:inline-block;
+    width:105px;
+    height:46px;
+    text-align:center;
+    font-size:16px;
+    color:#333;
+    border:none;
+    cursor:pointer;
+  }
+}

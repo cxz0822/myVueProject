@@ -46,13 +46,13 @@
   color: #ccc;
   margin: 0 3px;
 }
-.header .header-middle .header-middle-bg .right .loginAndRegister {
+.header .header-middle .header-middle-bg .right .loginAndReg {
   display: inline-block;
 }
-.header .header-middle .header-middle-bg .right .loginAndRegister a {
+.header .header-middle .header-middle-bg .right .loginAndReg a {
   margin-right: 0;
 }
-.header .header-middle .header-middle-bg .right .loginAndRegister i {
+.header .header-middle .header-middle-bg .right .loginAndReg i {
   color: #ccc;
   font-size: 12px;
 }

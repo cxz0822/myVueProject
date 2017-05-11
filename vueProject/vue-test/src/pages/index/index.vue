@@ -247,7 +247,7 @@
         this.mircoCourseList = data.getMicroClassList
         this.friendLink=data.friendLink
          /*jQuery(".public-class-live-wrap .slide-box").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:2,scroll:1});*/
-      }.bind(this))
+      }.bind(this),this)
     }
   })
   },

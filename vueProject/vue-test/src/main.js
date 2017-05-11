@@ -7,6 +7,12 @@ import $ from 'jquery'
 /**--ElementUI按需加载- start-*/
 Vue.use(Resource);
 Vue.use(Element);
+/*Vue.prototype.$loading=Loading.service;*/
+/*Vue.prototype.$msgbox=MessagBox
+Vue.prototype.$alert = MessageBox.alert
+Vue.prototype.$confirm = MessageBox.confirm
+Vue.prototype.$prompt = MessageBox.prompt
+Vue.prototype.$message = Message*/
 /**--ElementUI按需加载- end-*/
 
 import App from './App'

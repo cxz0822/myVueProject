@@ -17,18 +17,22 @@ export default new Router({
         content:Content,
         footer:Footer
       },
-      children:[//����ͷβ��
-        {//��ҳ
+      children:[//包含头尾的
+        {//首页
           path:'/home',
           name:'index',
           component:resolve => require(['../pages/index/index'],resolve)
         },
-        {//�γ�����ҳ
+        {//课程详情页
           path:'/courseDetail',
           name:'courseDetail',
           component:resolve => require(['../pages/courseDetail/courseDetail'],resolve)
         }
        ]
+    },{//不含头部和尾部的
+      path:'/loginAndRegister',
+      name:'loginAndRegister',
+      component:resolve=>require(['../pages/loginAndRegister/loginAndRegister.vue'],resolve)
     }
   ]
 })

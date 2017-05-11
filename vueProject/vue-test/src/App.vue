@@ -3,16 +3,25 @@
     <router-view name="header"></router-view>
     <router-view name="content"></router-view>
     <router-view name="footer"></router-view>
+    <login-related  :show-txt="$root.showTxt"
+                    :go-login-related="$root.goLoginRelated"
+                    @loginclose="closeLogin">
+    </login-related>
+    <router-view></router-view>
   </div>
 </template>
-<script>
+<script type="text/ecmascript-6">
+  import loginRelated from './pages/loginAndRegister/loginrelated'
   export default {
     name: 'app',
     components: {
-
+      loginRelated
     },
     methods: {
-
+      closeLogin(val,showTip){
+        this.$root.showTxt=showTip;
+        this.$root.goLoginRelated=val;
+  }
     }
   }
 </script>
