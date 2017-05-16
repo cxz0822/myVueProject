@@ -4,6 +4,7 @@
 /*-------------------常量----start-----------*/
 const domainName='';//代理服务器中间件所需要的请求前缀 todo 打包生产环境时要设为 '/'
 //正则表达式常量
+const REGNICKNAME=/^(\w|-|([\u4e00-\u9fa5])){4,20}$/;//用户昵称
 const REGPHONE=/^1[3578]\d{9}$/;//手机号
 const REGEMAIL=/^([.\w-])+@([\w-])+(\.[\w-])+/;//邮箱
 /*-------------------常量----end-----------*/
@@ -48,7 +49,7 @@ let getOkData = function (response, callback,vm) {
   if(response.ok){
     var bodyData=response.body;
     callback(bodyData);
-    openLoginRelated(vm,'login');
+    /*openLoginRelated(vm,'login');*/
   }
 };
 /**
@@ -74,6 +75,9 @@ let closeLoginRelated=function(thisvm,target){
 //导出
 export{
   domainName,
+  REGNICKNAME,
+  REGPHONE,
+  REGEMAIL,
   requestService,
   getOkData,
   openLoginRelated,

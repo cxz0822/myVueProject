@@ -1,8 +1,6 @@
 <template>
 <el-dialog size="loginrelated" :close-on-click-modal="false" :show-close="true" v-model="visibleLogin" v-if="visibleLogin">
-  <login v-if="showTip=='login'" @goreg="getCurrent" @gopwback="getCurrent"></login>
-<!--  <register v-if="showTip=='register'" @gologin="getCurrent"></register>
-  <pwback v-if="showTip=='pwback'" @gologin="getCurrent"></pwback>-->
+  <login v-if="showTip=='login'"></login>
 
 </el-dialog>
 
@@ -13,8 +11,6 @@
 </style>
 <script type="text/ecmascript-6">
   import login from './login'
-/*  import register from './register'
-  import pwback from './pwback'*/
   export default{
     name: 'loginrelated',
     props: ['showTxt', 'goLoginRelated'],
@@ -25,9 +21,7 @@
       }
     },
     components: {
-      login/*,
-      register,
-      pwback*/
+      login
     },
     watch: {
       showTxt(val){

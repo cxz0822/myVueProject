@@ -7,7 +7,6 @@
                     :go-login-related="$root.goLoginRelated"
                     @loginclose="closeLogin">
     </login-related>
-    <router-view></router-view>
   </div>
 </template>
 <script type="text/ecmascript-6">

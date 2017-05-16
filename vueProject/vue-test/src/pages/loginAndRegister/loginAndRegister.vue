@@ -8,7 +8,7 @@
       <el-tabs type="border-card">
         <el-tab-pane>
           <span slot="label">登录</span>
-          <el-form :model="loginForm" :rules="rules" ref="loginForm">
+          <el-form :model="loginForm" :rules="loginRules" ref="loginForm">
             <el-form-item prop="username">
               <el-input size="middleinput" type="text" v-model="loginForm.username" placeholder="请输入手机号"></el-input>
             </el-form-item>
@@ -25,7 +25,7 @@
           </el-form>
         </el-tab-pane>
         <el-tab-pane label="注册">
-          <el-form :model="registerForm" :rules="rules" ref="registerForm">
+          <el-form :model="registerForm" :rules="registerRules" ref="registerForm">
             <el-form-item prop="nickname">
               <el-input size="middleinput" v-model="registerForm.nickname" placeholder="用户名"></el-input>
             </el-form-item>
@@ -55,7 +55,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import {REGPHONE,requestService,getOkData,closeLoginRelatd} from '../../common/common'
+  import {REGNICKNAME,REGPHONE,REGEMAIL,requestService,getOkData,closeLoginRelatd} from '../../common/common'
     export default {
         name: 'loginAndRegister',
       data(){
@@ -69,7 +69,23 @@
           username:'',
           password:''
         },
-        rules:{
+        loginRules:{
+          username:[
+            {required:true,message:'请输入手机号',trigger:'blur'},
+            {pattern:REGPHONE,message:'请输入正确的手机号',trigger:'blur'}
+          ],
+          password:[
+            {required:true,message:'请输入密码',trigger:'blur'},
+            {min:6,max:20,message:'长度为6到20个字符',trigger:'blur'}
+          ]
+        },
+        registerRules:{
+          nickname:[
+            {required:true,message:"支持中文、字母、数字、'-'、'_'的组合，4-20个字符",trigger:'blur'},
+            {pattern:[REGNICKNAME],message:"支持中文、字母、数字、'-'、'_'的组合，4-20个字符",trigger:'blur'},
+            {pattern:REGEMAIL,email:true,message:"邮箱格式不正确",trigger:'blur'},
+            {min:4,max:20,message:'长度只能在4-20个字符之间',trigger:'blur'}
+          ],
           username:[
             {required:true,message:'请输入手机号',trigger:'blur'},
             {pattern:REGPHONE,message:'请输入正确的手机号',trigger:'blur'}

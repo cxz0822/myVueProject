@@ -29,10 +29,13 @@ export default new Router({
           component:resolve => require(['../pages/courseDetail/courseDetail'],resolve)
         }
        ]
-    },{//不含头部和尾部的
+    },
+    {//不含头部和尾部的
       path:'/loginAndRegister',
       name:'loginAndRegister',
-      component:resolve=>require(['../pages/loginAndRegister/loginAndRegister.vue'],resolve)
+      components:{
+        content:resolve=>require(['../pages/loginAndRegister/loginAndRegister'],resolve)
+      }
     }
   ]
 })

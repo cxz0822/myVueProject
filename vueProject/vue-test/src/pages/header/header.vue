@@ -12,23 +12,12 @@
           <a href="#/home"><img src="../../assets/images/index/logo.png" alt=""/><span>黑马程序员线上平台</span></a>
         </div>
         <div class="right">
-          <router-link to="" @click="openLogin">学习中心</router-link>
+          <router-link to="">学习中心</router-link>
           <router-link to="">购物车</router-link>
-          <div class="loginAndReg">
-            <el-dropdown>
-                    <span class="el-dropdown-link">
-                        <router-link to="" @click="openLogin">登陆</router-link>
-                        <span class="separator">|</span>
-                        <router-link to="/loginAndRegister">注册</router-link><i class="el-icon-caret-bottom el-icon--right"></i>
-                    </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>黄金糕</el-dropdown-item>
-                <el-dropdown-item>狮子头</el-dropdown-item>
-                <el-dropdown-item>螺蛳粉</el-dropdown-item>
-                <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-                <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+          <div class="loginAndReg" v-if="!$root.globalLogin">
+            <span class="login" @click="openLogin">登录</span>
+            <span class="separator">|</span>
+            <router-link to="/loginAndRegister">注册</router-link>
           </div>
         </div>
       </div>
@@ -68,21 +57,18 @@
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
+  import {openLoginRelated,requestService,getOkData} from '../../common/common.js'
   export default {
     name: 'header',
-    data()
-  {
+    data(){
     return {
       isLogined: false
     }
-  }
-  ,
+  },
   methods: {
-    openLogin()
-    {
-      openLoginRelated(this, 'login');
-      alert("1")
+    openLogin(){
+      openLoginRelated(this,'login')
     }
   }
   }

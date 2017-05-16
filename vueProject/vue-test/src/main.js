@@ -30,6 +30,11 @@ Vue.http.options.emulateHTTP = true//允许post传递json格式的参数请求
 /* eslint-disable no-new */
 const app=new Vue({
   name:'root',
+  data: {//根数据
+    goLoginRelated: false,
+    showTxt: '',
+    globalLogin:false//记录是否登录了
+  },
   router,
   render: h => h(App)
 });
